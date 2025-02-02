@@ -1,0 +1,99 @@
+/*------------------------------------*\
+  $ MOODBOARD
+\*------------------------------------*/
+.moodboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 4.3rem 0 5rem;
+  position: relative;
+  @media (min-width: 1366px) {
+    display: block;
+    height: 1240px;
+  }
+}
+.card {
+  margin: 1rem;
+  position: relative;
+  @media (min-width: 1366px) {
+    margin: 0;
+    position: absolute;
+    &.card-01 { left: 300px; }
+    &.card-02 { top: 235px; right: 36px; }
+    &.card-03 { top: 277px; right: 613px; }
+    &.card-04 { top: 765px; right: 319px; } 
+    &.card-05 { top: 765px; left: 145px; }
+  }
+  .icon-description, 
+  .title-01 { position: absolute; }
+
+  .icon-description {
+    width: 24px; height: 24px;
+    right: 15px; top: 15px;
+    z-index: 10;
+  }
+  .title-01 {
+    bottom: 2.5rem; left: 50%;
+    margin: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    @media (min-width: 1366px) {
+      font: 5.2rem/1 'Tinos', serif; 
+    }
+  }
+  &__description {
+    background-color: rgba(0,0,0,.90);
+    color: $white;
+    opacity: 0;
+    padding: 20px;
+    position: absolute; top: 0; bottom: 0;
+    transition: all .2s ease-in;
+    .title-04 {
+      margin: 20px 0 15px;
+      position: static;
+      transform: translate(0);
+      text-align: center;
+    }
+    .text-01 {
+      line-height: 25px;
+      text-align: left;
+      padding: 0;
+    }
+    &.active {
+      opacity: 1;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.form-01,
+.form-02,
+.form-03,
+.moodboard-img-01,
+.moodboard-img-02,
+.moodboard-img-03,
+.moodboard-img-04 { position: absolute; }
+
+.form-01 {
+  background-color: #e7dca8;
+  top: 313px; left: 50px;
+  width: 217px; height: 357px;
+}
+.form-02 {
+  background-color: #f8f3dd;
+  top: 276px; right: 376px;
+  width: 222px; height: 357px;
+  z-index: -2;
+}
+.form-03 {
+  background-color: #b8af6e;
+  bottom: 280px; right: 105px;
+  width: 196px; height: 196px;
+}
+
+.moodboard-img-01 { bottom: 180px; right: 37px; }
+.moodboard-img-02 { top: 60px; right: 151px; z-index: -1;}
+.moodboard-img-03 { top: 277px; left: 127px; }
+.moodboard-img-04 { top: 374px; right: 330px; }

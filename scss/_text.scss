@@ -1,0 +1,137 @@
+/*------------------------------------*\
+  $ TITLE
+\*------------------------------------*/
+.title-01 { font: 400 3.2rem/1 'Tinos', serif; }
+.title-02 { font: 400 2.4rem/1.2 'Josefin Sans', serif; letter-spacing: 1px; }
+.title-03 { font: 3rem/1 'Tinos', serif; }
+.title-04 { font: 3.2rem/1 'Tinos', serif; }
+.title-05 { font: bold 3.2rem/1 'Tinos', serif; }
+
+/*------------------------------------*\
+  $ TEXT
+\*------------------------------------*/
+.text-01 {
+  font: 1.6rem/24px 'Tinos', serif;
+  margin: 0 auto; padding: 0 1.6rem;
+  max-width: 680px;
+}
+/*------------------------------------*\
+  $ INTRODUCTION
+\*------------------------------------*/
+.intro {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+  @media (min-width: 1366px) {
+    text-align: center;
+  }
+}
+
+/*------------------------------------*\
+  $ SIDE BY SIDE BLOCK
+\*------------------------------------*/
+.content-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  &-01 {
+    @media (min-width: 1366px) { 
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+  }
+  &-02 {
+    @media (min-width: 1366px) { 
+      flex-direction: row;
+    }
+  }
+  .img {
+    margin: 4rem 0 0;
+    width: 100%; height: auto;
+  }
+  @media (min-width: 1366px) { 
+    .content-block-inner,
+    .img {
+      flex-basis: 50%;
+      margin-top: 0;
+    }
+    .title-02,
+    .text-01{
+      margin: 0 auto;
+      max-width: 523px;
+    }
+    .title-02 {
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+  }
+}
+/*------------------------------------*\
+  $ QUOTES
+\*------------------------------------*/
+.block-quotes {
+  margin-bottom: 80px;
+  @media (min-width: 1366px) { 
+    background-color: #f9f9f9;
+    margin: 30px auto 72px; padding: 20px;
+    max-width: 680px;
+  }
+  .name {
+    display: block;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 1rem;
+  }
+}
+/*------------------------------------*\
+  $ STORES
+\*------------------------------------*/
+.more-stores { 
+  &__title {
+    display: block;
+    font: 700 1.4rem/1.2 'Josefin Sans', serif; 
+    letter-spacing: 1px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    @media (min-width: 1366px) { 
+      display: block;
+      margin: 23px 0 30px;
+    }
+  }
+  &__icon { 
+    position: relative; top: 4px; left: 11px;
+    transition: all .2s ease-in;
+  }
+  &__storename {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 2px;
+    @media (min-width: 1366px) { 
+      display: inline;
+      margin-bottom: 0;
+    }
+  }
+  ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    font: 1.6rem/1 'Tinos', serif; 
+    margin-bottom: 21px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+.more-stores.active {
+  .more-stores__icon {
+    transform: rotate(-180deg);
+  }
+  ul {
+    display: block;
+  }
+}
